@@ -1,7 +1,7 @@
 <div align="center">
   <h1 align="center">HOSTKILL</h1>
   <p align="center">
-    <strong>The "God-Mode" Local System Command Center</strong>
+    <strong>A Cross-Platform Local System Command Center</strong>
   </p>
   <p align="center">
     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
@@ -13,25 +13,25 @@
 </div>
 
 <p align="center">
-  HostKill is a powerful, locally-hosted developer dashboard wrapped in a sleek, retro-cyberpunk aesthetic. It acts as your central command station, giving you absolute, cross-platform control over your machine's background processes, network traffic, hardware resources, and Docker containers directly from the browser.
+  HostKill is a powerful, locally-hosted developer dashboard. It acts as your central command station, giving you comprehensive, cross-platform control over your machine's background processes, network traffic, hardware resources, and Docker containers directly from the browser.
 </p>
 
 ---
 
 ## ✨ Features
 
-- 💀 **Top Process & Port Killer**
-  - Instantly identify the top 10 most resource-heavy processes eating your CPU and RAM.
-  - See exactly what background services are blocking specific localhost ports.
-  - Safely terminate rogue processes with a built-in two-step `SURE? / CANCEL` lock.
-  - *Safety First:* Automatically protects critical OS background services and the HostKill server itself from being accidentally killed.
+- ⚙️ **Process & Port Manager**
+  - Instantly identify the top 10 most resource-heavy processes utilizing your CPU and RAM.
+  - See exactly what background services are utilizing specific localhost ports.
+  - Safely terminate processes with a built-in two-step `SURE? / CANCEL` confirmation.
+  - *Safety Guard:* Automatically protects critical OS background services and the HostKill server itself from being accidentally terminated.
 
 - 🖥️ **Embedded Command Shell**
   - A fully functional, cross-platform terminal emulator embedded directly into the dashboard.
   - Execute native OS commands without ever opening your terminal app.
   - Maintains stateful directory navigation (`cd`) and command history.
 
-- 🗂️ **Modular Cyberpunk UI**
+- 🗂️ **Modular Dashboard UI**
   - Clean, tabbed navigation system (`[PORTS]`, `[PROCESSES]`, `[CONTAINERS]`, `[TERMINAL]`) to keep your workspace organized.
   - Hardware and network monitors are permanently pinned to the top of the screen.
 
@@ -54,7 +54,7 @@
 
 ## 🛠️ Technology Stack
 
-- **Frontend**: React.js, Vite, Vanilla CSS (Cyberpunk UI System)
+- **Frontend**: React.js, Vite, Vanilla CSS
 - **Backend**: Node.js, Express.js
 - **System Engine**: `systeminformation` (for OS-agnostic hardware polling)
 - **Containerization**: Native Docker CLI integration
@@ -111,6 +111,6 @@ HostKill is designed to be a **local-first** application.
 ---
 
 <div align="center">
-  <p><i>Initialize Sensors. Identify Targets. Execute.</i></p>
+  <p><i>A powerful utility for system management.</i></p>
   <p><strong>Developed by JSK</strong></p>
 </div>
