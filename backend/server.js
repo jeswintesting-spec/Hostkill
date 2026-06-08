@@ -268,6 +268,47 @@ app.get('/api/network', async (req, res) => {
     }
 });
 
+// --- TERMINAL API ---
+const path = require('path');
+let currentCwd = os.homedir(); // Start terminal in user's home directory
+
+app.post('/api/terminal', (req, res) => {
+    const { command } = req.body;
+    if (!command) return res.status(400).json({ error: 'Command is required' });
+
+    const trimmedCmd = command.trim();
+
+    // Handle 'clear' command on frontend
+    
+    // Handle 'cd' commands statefully
+    if (trimmedCmd.startsWith('cd ') || trimmedCmd === 'cd') {
+        const targetDir = trimmedCmd === 'cd' ? os.homedir() : trimmedCmd.substring(3).trim();
+        try {
+            const newCwd = path.resolve(currentCwd, targetDir);
+            // Quick test to see if directory exists using fs
+            const fs = require('fs');
+            if (fs.existsSync(newCwd) && fs.statSync(newCwd).isDirectory()) {
+                currentCwd = newCwd;
+                return res.json({ cwd: currentCwd, output: '' });
+            } else {
+                return res.json({ cwd: currentCwd, output: `cd: ${targetDir}: No such file or directory\n` });
+            }
+        } catch (err) {
+            return res.json({ cwd: currentCwd, output: `cd: ${targetDir}: Error\n` });
+        }
+    }
+
+    exec(command, { cwd: currentCwd }, (error, stdout, stderr) => {
+        let output = '';
+        if (error && !stdout && !stderr) {
+             output = `Command failed: ${error.message}\n`;
+        } else {
+             output = stdout || stderr || '';
+        }
+        res.json({ cwd: currentCwd, output: output });
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`HostKill Backend running on http://localhost:${PORT}`);
 });

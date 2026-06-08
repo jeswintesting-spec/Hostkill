@@ -3,6 +3,13 @@
   <p align="center">
     <strong>The "God-Mode" Local System Command Center</strong>
   </p>
+  <p align="center">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" />
+    <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License" />
+  </p>
 </div>
 
 <p align="center">
@@ -13,10 +20,20 @@
 
 ## ✨ Features
 
-- 💀 **Smart Process & Port Killer**
-  - Instantly identify what processes are running on your machine and which ports they are blocking.
+- 💀 **Top Process & Port Killer**
+  - Instantly identify the top 10 most resource-heavy processes eating your CPU and RAM.
+  - See exactly what background services are blocking specific localhost ports.
   - Safely terminate rogue processes with a built-in two-step `SURE? / CANCEL` lock.
   - *Safety First:* Automatically protects critical OS background services and the HostKill server itself from being accidentally killed.
+
+- 🖥️ **Embedded Command Shell**
+  - A fully functional, cross-platform terminal emulator embedded directly into the dashboard.
+  - Execute native OS commands without ever opening your terminal app.
+  - Maintains stateful directory navigation (`cd`) and command history.
+
+- 🗂️ **Modular Cyberpunk UI**
+  - Clean, tabbed navigation system (`[PORTS]`, `[PROCESSES]`, `[CONTAINERS]`, `[TERMINAL]`) to keep your workspace organized.
+  - Hardware and network monitors are permanently pinned to the top of the screen.
 
 - 🐳 **Docker Container Manager**
   - No more typing `docker ps`. View all your local Docker containers in real-time.
@@ -95,4 +112,5 @@ HostKill is designed to be a **local-first** application.
 
 <div align="center">
   <p><i>Initialize Sensors. Identify Targets. Execute.</i></p>
+  <p><strong>Developed by JSK</strong></p>
 </div>
